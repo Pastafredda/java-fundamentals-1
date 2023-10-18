@@ -13,18 +13,33 @@ public class FestaFerragnez {
         System.out.println("il nome che hai inserito è" + " " + nomeUtente);
         //setto una variabile booleana
         boolean found = false;
+
         //creare un ciclo che verica per ogni nome sulla lista se il nome utente corrisponde
-        for (int i = 0; i < invitati.length ; i++) {
-            if (invitati[i].equals(nomeUtente)) {
+//        for (int i = 0; i < invitati.length ; i++) {
+//            if (invitati[i].equals(nomeUtente)) {
+//                found = true;
+//                System.out.println("Il tuo nome è in lista, puoi entrare");
+//                break;
+//            }
+//        }
+//        //fare in modo che restituisca una sola volta la risposta negativa
+//            if(!found) {
+//                System.out.println("Ci dispiace ma non sei in lista");
+//            }
+
+        //bonus
+        int i = 0;
+        while (i < invitati.length && !found){
+            if (invitati[i].equals(nomeUtente)){
                 found = true;
                 System.out.println("Il tuo nome è in lista, puoi entrare");
                 break;
             }
+            i++;
         }
-        //fare in modo che restituisca una sola volta la risposta negativa
-            if(!found) {
-                System.out.println("Ci dispiace ma non sei in lista");
-            }
+        if (!found){
+            System.out.println("Ci dispiace ma non sei in lista");
+        }
         scan.close();
     }
 
