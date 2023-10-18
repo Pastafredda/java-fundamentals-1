@@ -8,7 +8,7 @@ public class FestaFerragnez {
         String nomeUtente;
         // chiedere all'utente come si chiama
         Scanner scan = new Scanner(System.in);
-        System.out.print("Inserisci il tuo nome");
+        System.out.println("Inserisci il tuo nome");
         nomeUtente = scan.nextLine();
         System.out.println("il nome che hai inserito è" + " " + nomeUtente);
         //setto una variabile booleana
